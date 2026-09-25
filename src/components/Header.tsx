@@ -4,7 +4,12 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useStore } from '@/context/StoreContext';
-import { ShoppingBag, Heart, Search, Menu, X, ShieldCheck, Sparkles, MessageCircle } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import {
+  FacetedDiamondIcon,
+  LuxuryToteIcon,
+  WhatsApp21stIcon
+} from '@/components/icons/LuxuryIcons';
 import { ProductCategory } from '@/types';
 
 interface HeaderProps {
@@ -13,15 +18,13 @@ interface HeaderProps {
 }
 
 export default function Header({ onSelectCategory, onOpenCustomSection }: HeaderProps) {
-  const { settings, cart, wishlist, setIsCartOpen } = useStore();
+  const { settings, cart, setIsCartOpen } = useStore();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
 
   const totalCartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   const categories: { label: string; value: ProductCategory | 'all' }[] = [
-    { label: 'Toutes les Créations', value: 'all' },
+    { label: 'Toutes les Pièces', value: 'all' },
     { label: 'Bagues', value: 'bagues' },
     { label: 'Colliers & Sautoirs', value: 'colliers' },
     { label: 'Bracelets', value: 'bracelets' },
@@ -30,17 +33,19 @@ export default function Header({ onSelectCategory, onOpenCustomSection }: Header
     { label: 'Coffrets & Packs', value: 'packs' }
   ];
 
+  // Clean announcement text (removing any leftover emojis)
+  const cleanAnnouncement = settings.announcementText.replace(/[✨💎]/g, '').trim();
+
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-zinc-100 transition-all">
       {/* Top Luxury Announcement Ticker */}
-      <div className="bg-[#FAF7F8] border-b border-rose-100/60 py-2 px-4 text-center text-xs tracking-wider text-zinc-700 flex items-center justify-center gap-3">
-        <span className="inline-flex items-center gap-1.5 font-medium text-[#943859]">
-          <Sparkles className="w-3.5 h-3.5" />
-          {settings.announcementText}
+      <div className="bg-[#FAFAFA] border-b border-zinc-100 py-2 px-4 text-center text-xs tracking-wider text-zinc-600 flex items-center justify-center gap-3">
+        <span className="inline-flex items-center gap-2 font-medium text-zinc-800">
+          <FacetedDiamondIcon className="w-3 h-3 text-[#943859]" />
+          {cleanAnnouncement}
         </span>
-        <span className="hidden md:inline-block text-zinc-300">|</span>
-        <span className="hidden md:inline-flex items-center gap-1 text-zinc-500">
-          <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+        <span className="hidden md:inline-block text-zinc-300">/</span>
+        <span className="hidden md:inline-flex items-center gap-1.5 text-zinc-500 font-light">
           Paiement à la livraison partout au Maroc
         </span>
       </div>
@@ -52,10 +57,10 @@ export default function Header({ onSelectCategory, onOpenCustomSection }: Header
           <div className="flex items-center lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-zinc-600 hover:text-zinc-900 rounded-md focus:outline-none"
+              className="p-2 text-zinc-700 hover:text-zinc-950 focus:outline-none"
               aria-label="Ouvrir le menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-5 h-5 stroke-[1.25]" /> : <Menu className="w-5 h-5 stroke-[1.25]" />}
             </button>
           </div>
 
@@ -63,40 +68,40 @@ export default function Header({ onSelectCategory, onOpenCustomSection }: Header
           <nav className="hidden lg:flex items-center gap-8">
             <button
               onClick={() => onSelectCategory && onSelectCategory('all')}
-              className="text-xs uppercase tracking-widest text-zinc-700 hover:text-[#943859] transition-colors py-2 font-medium"
+              className="text-xs uppercase tracking-[0.2em] text-zinc-700 hover:text-[#943859] transition-colors py-2 font-medium cursor-pointer"
             >
               Collection
             </button>
             <button
               onClick={() => onSelectCategory && onSelectCategory('bagues')}
-              className="text-xs uppercase tracking-widest text-zinc-700 hover:text-[#943859] transition-colors py-2 font-medium"
+              className="text-xs uppercase tracking-[0.2em] text-zinc-700 hover:text-[#943859] transition-colors py-2 font-medium cursor-pointer"
             >
               Bagues
             </button>
             <button
               onClick={() => onSelectCategory && onSelectCategory('colliers')}
-              className="text-xs uppercase tracking-widest text-zinc-700 hover:text-[#943859] transition-colors py-2 font-medium"
+              className="text-xs uppercase tracking-[0.2em] text-zinc-700 hover:text-[#943859] transition-colors py-2 font-medium cursor-pointer"
             >
               Colliers
             </button>
             <button
               onClick={() => onSelectCategory && onSelectCategory('bracelets')}
-              className="text-xs uppercase tracking-widest text-zinc-700 hover:text-[#943859] transition-colors py-2 font-medium"
+              className="text-xs uppercase tracking-[0.2em] text-zinc-700 hover:text-[#943859] transition-colors py-2 font-medium cursor-pointer"
             >
               Bracelets
             </button>
             <button
               onClick={() => onOpenCustomSection && onOpenCustomSection()}
-              className="text-xs uppercase tracking-widest font-semibold text-[#943859] hover:text-[#782845] transition-colors py-2 border-b-2 border-[#943859]/30"
+              className="text-xs uppercase tracking-[0.2em] font-medium text-[#943859] hover:text-zinc-900 transition-colors py-2 border-b border-[#943859]/40 cursor-pointer"
             >
-              Sur-Mesure ✨
+              Sur-Mesure
             </button>
           </nav>
 
           {/* Center Brand Identity */}
           <div className="flex-1 lg:flex-initial flex items-center justify-center">
             <Link href="/" className="group flex items-center gap-3">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden border border-rose-200/60 shadow-sm group-hover:scale-105 transition-transform duration-300">
+              <div className="relative w-11 h-11 rounded-full overflow-hidden border border-zinc-200/80 group-hover:border-zinc-400 transition-colors">
                 <Image
                   src="/brand/elyana-logo.jpg"
                   alt="Elyana Accessoires Logo"
@@ -106,10 +111,10 @@ export default function Header({ onSelectCategory, onOpenCustomSection }: Header
                 />
               </div>
               <div className="text-left">
-                <span className="block font-serif text-xl sm:text-2xl font-light tracking-[0.18em] text-zinc-900 group-hover:text-[#943859] transition-colors">
+                <span className="block font-serif text-xl sm:text-2xl font-light tracking-[0.2em] text-zinc-900 group-hover:text-[#943859] transition-colors">
                   ELYANA
                 </span>
-                <span className="block text-[9px] uppercase tracking-[0.35em] text-zinc-400 font-medium -mt-0.5">
+                <span className="block text-[8px] uppercase tracking-[0.35em] text-zinc-400 font-medium -mt-0.5">
                   ACCESSOIRES • CASABLANCA
                 </span>
               </div>
@@ -118,22 +123,22 @@ export default function Header({ onSelectCategory, onOpenCustomSection }: Header
 
           {/* Right Action Icons */}
           <div className="flex items-center gap-3 sm:gap-5">
-            {/* Direct WhatsApp Concierge Button */}
+            {/* Direct WhatsApp Concierge Button from 21st dev */}
             <a
               href={`https://wa.me/${settings.whatsappNumber}?text=${encodeURIComponent("Bonjour Elyana Accessoires, j'ai une question concernant vos bijoux.")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-1.5 text-xs text-emerald-800 bg-emerald-50 hover:bg-emerald-100/80 px-3 py-1.5 rounded-full transition-colors font-medium border border-emerald-200/60"
+              className="hidden sm:inline-flex items-center gap-2 text-xs text-zinc-700 hover:text-emerald-700 hover:border-emerald-300 px-3 py-1.5 transition-colors font-medium border border-zinc-200"
               title="Discuter directement sur WhatsApp"
             >
-              <MessageCircle className="w-3.5 h-3.5 text-emerald-600 fill-emerald-600" />
+              <WhatsApp21stIcon className="w-3.5 h-3.5 text-emerald-600" />
               <span>WhatsApp</span>
             </a>
 
             {/* Admin shortcut */}
             <Link
               href="/admin"
-              className="text-[11px] uppercase tracking-wider text-zinc-400 hover:text-zinc-800 transition-colors px-2 py-1 rounded"
+              className="text-[11px] uppercase tracking-widest text-zinc-400 hover:text-zinc-900 transition-colors px-2 py-1"
               title="Accès Gestionnaire / Admin"
             >
               Admin
@@ -142,12 +147,12 @@ export default function Header({ onSelectCategory, onOpenCustomSection }: Header
             {/* Cart Button */}
             <button
               onClick={() => setIsCartOpen(true)}
-              className="relative p-2 text-zinc-700 hover:text-[#943859] transition-colors"
+              className="relative p-2 text-zinc-800 hover:text-[#943859] transition-colors cursor-pointer"
               aria-label="Panier d'achats"
             >
-              <ShoppingBag className="w-5 h-5 stroke-[1.5]" />
+              <LuxuryToteIcon className="w-5 h-5 stroke-[1.25]" />
               {totalCartCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-[#943859] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
+                <span className="absolute -top-1 -right-1 bg-zinc-900 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-medium">
                   {totalCartCount}
                 </span>
               )}
@@ -158,8 +163,8 @@ export default function Header({ onSelectCategory, onOpenCustomSection }: Header
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-zinc-100 bg-white px-4 pt-3 pb-6 space-y-3">
-          <div className="text-xs uppercase tracking-widest text-zinc-400 font-semibold mb-2">
+        <div className="lg:hidden border-t border-zinc-100 bg-white px-4 pt-4 pb-6 space-y-3">
+          <div className="text-[10px] uppercase tracking-[0.25em] text-zinc-400 font-medium mb-2">
             Catégories
           </div>
           <div className="grid grid-cols-2 gap-2">
@@ -170,7 +175,7 @@ export default function Header({ onSelectCategory, onOpenCustomSection }: Header
                   onSelectCategory && onSelectCategory(cat.value);
                   setMobileMenuOpen(false);
                 }}
-                className="text-left text-sm py-2 px-3 rounded-lg hover:bg-rose-50/50 text-zinc-700 hover:text-[#943859] transition-colors"
+                className="text-left text-xs uppercase tracking-wider py-2.5 px-3 border border-zinc-100 hover:border-zinc-300 text-zinc-700 hover:text-[#943859] transition-colors"
               >
                 {cat.label}
               </button>
@@ -182,18 +187,18 @@ export default function Header({ onSelectCategory, onOpenCustomSection }: Header
                 onOpenCustomSection && onOpenCustomSection();
                 setMobileMenuOpen(false);
               }}
-              className="w-full text-center py-2.5 px-4 bg-rose-50 text-[#943859] font-medium rounded-lg text-sm"
+              className="w-full text-center py-3 px-4 bg-zinc-900 text-white font-medium text-xs uppercase tracking-widest"
             >
-              ✨ Demande de Bijou Sur-Mesure
+              Atelier Sur-Mesure
             </button>
             <a
               href={`https://wa.me/${settings.whatsappNumber}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full text-center py-2.5 px-4 bg-emerald-600 text-white font-medium rounded-lg text-sm flex items-center justify-center gap-2"
+              className="w-full text-center py-3 px-4 border border-zinc-300 text-zinc-800 font-medium text-xs uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-zinc-50"
             >
-              <MessageCircle className="w-4 h-4" />
-              Commander sur WhatsApp
+              <WhatsApp21stIcon className="w-3.5 h-3.5 text-emerald-600" />
+              <span>Commander sur WhatsApp</span>
             </a>
           </div>
         </div>

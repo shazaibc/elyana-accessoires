@@ -4,7 +4,8 @@ import React, { useState, useMemo } from 'react';
 import Image from 'next/image';
 import { Product, ProductCategory, ProductMaterial } from '@/types';
 import { useStore } from '@/context/StoreContext';
-import { Search, SlidersHorizontal, Heart, MessageCircle, Sparkles, Check } from 'lucide-react';
+import { Search, SlidersHorizontal, Heart, Check } from 'lucide-react';
+import { FacetedDiamondIcon, WhatsApp21stIcon } from '@/components/icons/LuxuryIcons';
 
 interface ProductCatalogProps {
   onSelectProduct: (product: Product) => void;
@@ -66,7 +67,7 @@ export default function ProductCatalog({
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#943859] font-medium mb-3">
-            <Sparkles className="w-3.5 h-3.5" />
+            <FacetedDiamondIcon className="w-3.5 h-3.5" />
             <span>Catalogue Exclusif</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl font-light text-zinc-900 tracking-tight">
@@ -291,7 +292,7 @@ export default function ProductCatalog({
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs font-medium border border-emerald-200/60 rounded-xs transition-colors"
                       title="Commander directement sur WhatsApp"
                     >
-                      <MessageCircle className="w-3.5 h-3.5 text-emerald-600 fill-emerald-600" />
+                      <WhatsApp21stIcon className="w-3.5 h-3.5 text-emerald-600" />
                       <span className="hidden sm:inline">WhatsApp</span>
                     </a>
                   </div>

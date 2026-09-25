@@ -3,7 +3,12 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { useStore } from '@/context/StoreContext';
-import { X, Trash2, Plus, Minus, MessageCircle, ShieldCheck, Truck, ShoppingBag } from 'lucide-react';
+import { X, Trash2, Plus, Minus } from 'lucide-react';
+import {
+  LuxuryToteIcon,
+  WhatsApp21stIcon,
+  BanknoteShieldIcon
+} from '@/components/icons/LuxuryIcons';
 
 const MOROCCO_CITIES = [
   'Casablanca',
@@ -66,18 +71,18 @@ export default function CartDrawer() {
         {/* Header */}
         <div className="p-5 border-b border-zinc-100 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <ShoppingBag className="w-5 h-5 text-zinc-900" />
+            <LuxuryToteIcon className="w-5 h-5 text-zinc-900 stroke-[1.25]" />
             <h2 className="font-serif text-lg text-zinc-900 font-normal">Votre Panier</h2>
-            <span className="text-xs bg-rose-50 text-[#943859] px-2 py-0.5 rounded-full font-medium">
+            <span className="text-xs bg-zinc-100 text-zinc-700 px-2 py-0.5 rounded-full font-medium">
               {cart.reduce((s, i) => s + i.quantity, 0)} articles
             </span>
           </div>
           <button
             onClick={() => setIsCartOpen(false)}
-            className="p-2 text-zinc-400 hover:text-zinc-800 transition-colors"
+            className="p-2 text-zinc-400 hover:text-zinc-800 transition-colors cursor-pointer"
             aria-label="Fermer le panier"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5 stroke-[1.25]" />
           </button>
         </div>
 
@@ -85,12 +90,12 @@ export default function CartDrawer() {
         <div className="flex-1 overflow-y-auto p-5 space-y-4">
           {cart.length === 0 ? (
             <div className="text-center py-20 text-zinc-400">
-              <ShoppingBag className="w-12 h-12 stroke-[1] mx-auto text-zinc-300 mb-3" />
+              <LuxuryToteIcon className="w-10 h-10 stroke-[1] mx-auto text-zinc-300 mb-3" />
               <p className="font-serif text-base text-zinc-600">Votre panier est vide</p>
               <p className="text-xs text-zinc-400 mt-1">Explorez nos collections et découvrez nos pièces uniques.</p>
               <button
                 onClick={() => setIsCartOpen(false)}
-                className="mt-6 px-6 py-2.5 bg-zinc-900 text-white text-xs uppercase tracking-wider font-medium"
+                className="mt-6 px-6 py-2.5 bg-zinc-900 text-white text-xs uppercase tracking-wider font-medium cursor-pointer"
               >
                 Découvrir la collection
               </button>
@@ -182,8 +187,8 @@ export default function CartDrawer() {
             </div>
 
             {/* Cash on Delivery Notice */}
-            <div className="bg-rose-50/70 border border-rose-200/50 p-3 text-xs text-[#943859] mb-4 flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 shrink-0" />
+            <div className="bg-zinc-100/70 border border-zinc-200 p-3 text-xs text-zinc-700 mb-4 flex items-center gap-2">
+              <BanknoteShieldIcon className="w-4 h-4 shrink-0 text-zinc-900" />
               <span>Paiement en espèces à la livraison après inspection de votre commande.</span>
             </div>
 
@@ -191,7 +196,7 @@ export default function CartDrawer() {
             {!showCheckoutForm ? (
               <button
                 onClick={() => setShowCheckoutForm(true)}
-                className="w-full py-3.5 bg-zinc-900 hover:bg-black text-white text-xs uppercase tracking-[0.2em] font-medium transition-colors flex items-center justify-center gap-2 shadow-sm"
+                className="w-full py-3.5 bg-zinc-900 hover:bg-black text-white text-xs uppercase tracking-[0.2em] font-medium transition-colors flex items-center justify-center gap-2 shadow-xs cursor-pointer"
               >
                 <span>Commander (Cash on Delivery)</span>
               </button>
@@ -238,9 +243,9 @@ export default function CartDrawer() {
 
                 <button
                   type="submit"
-                  className="w-full py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs uppercase tracking-[0.2em] font-medium transition-colors flex items-center justify-center gap-2 shadow-md"
+                  className="w-full py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs uppercase tracking-[0.2em] font-medium transition-colors flex items-center justify-center gap-2 shadow-xs cursor-pointer"
                 >
-                  <MessageCircle className="w-4 h-4 fill-white" />
+                  <WhatsApp21stIcon className="w-4 h-4" />
                   <span>Confirmer la commande sur WhatsApp</span>
                 </button>
               </form>

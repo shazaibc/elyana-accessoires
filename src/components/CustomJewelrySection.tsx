@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useStore } from '@/context/StoreContext';
-import { Sparkles, MessageCircle, Gem, PenTool, CheckCircle, ArrowRight } from 'lucide-react';
+import { AtelierCompassIcon, WhatsApp21stIcon } from '@/components/icons/LuxuryIcons';
 
 const JEWELRY_TYPES = [
   'Collier Prénom / Calligraphie',
@@ -79,7 +79,7 @@ export default function CustomJewelrySection() {
         {/* Title Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#943859] font-medium mb-3">
-            <Sparkles className="w-3.5 h-3.5" />
+            <AtelierCompassIcon className="w-3.5 h-3.5" />
             <span>Atelier de Confection</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-zinc-900 tracking-tight">
@@ -274,7 +274,7 @@ export default function CustomJewelrySection() {
                 type="submit"
                 className="w-full sm:w-auto px-10 py-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 inline-flex items-center justify-center gap-3 shadow-md"
               >
-                <MessageCircle className="w-4 h-4 fill-white" />
+                <WhatsApp21stIcon className="w-4 h-4" />
                 <span>Transmettre mon Projet sur WhatsApp</span>
               </button>
               <p className="text-[11px] text-zinc-400 mt-3 font-light">

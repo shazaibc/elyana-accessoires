@@ -4,7 +4,8 @@ import React from 'react';
 import Image from 'next/image';
 import { Product } from '@/types';
 import { useStore } from '@/context/StoreContext';
-import { MessageCircle, Eye, Sparkles } from 'lucide-react';
+import { Eye } from 'lucide-react';
+import { FacetedDiamondIcon, WhatsApp21stIcon } from '@/components/icons/LuxuryIcons';
 
 interface ProductMarqueeProps {
   onSelectProduct: (product: Product) => void;
@@ -25,7 +26,7 @@ export default function ProductMarquee({ onSelectProduct }: ProductMarqueeProps)
     <section className="py-16 bg-[#FAFAFA] border-y border-zinc-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center">
         <div className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#943859] font-medium mb-3">
-          <Sparkles className="w-3.5 h-3.5" />
+          <FacetedDiamondIcon className="w-3.5 h-3.5" />
           <span>Sélection Coup de Cœur</span>
         </div>
         <h2 className="font-serif text-2xl sm:text-3xl font-light text-zinc-900 tracking-tight">
@@ -100,7 +101,7 @@ export default function ProductMarquee({ onSelectProduct }: ProductMarqueeProps)
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-[11px] font-medium text-emerald-800 bg-emerald-50 hover:bg-emerald-100 px-2.5 py-1 transition-colors border border-emerald-200/50 rounded-xs"
                   >
-                    <MessageCircle className="w-3.5 h-3.5 text-emerald-600" />
+                    <WhatsApp21stIcon className="w-3.5 h-3.5 text-emerald-600" />
                     <span>WhatsApp</span>
                   </a>
                 </div>
@@ -174,7 +175,7 @@ export default function ProductMarquee({ onSelectProduct }: ProductMarqueeProps)
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-[11px] font-medium text-emerald-800 bg-emerald-50 hover:bg-emerald-100 px-2.5 py-1 transition-colors border border-emerald-200/50 rounded-xs"
                   >
-                    <MessageCircle className="w-3.5 h-3.5 text-emerald-600" />
+                    <WhatsApp21stIcon className="w-3.5 h-3.5 text-emerald-600" />
                     <span>WhatsApp</span>
                   </a>
                 </div>

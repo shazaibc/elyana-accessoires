@@ -4,7 +4,13 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Product } from '@/types';
 import { useStore } from '@/context/StoreContext';
-import { X, MessageCircle, ShoppingBag, ShieldCheck, Truck, Sparkles, Check, ChevronRight } from 'lucide-react';
+import { X } from 'lucide-react';
+import {
+  WhatsApp21stIcon,
+  LuxuryToteIcon,
+  CourierBoxIcon,
+  BanknoteShieldIcon
+} from '@/components/icons/LuxuryIcons';
 
 interface ProductModalProps {
   product: Product | null;
@@ -196,27 +202,27 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
               rel="noopener noreferrer"
               className="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs uppercase tracking-[0.2em] font-medium transition-colors flex items-center justify-center gap-2.5 shadow-sm"
             >
-              <MessageCircle className="w-4 h-4 fill-white" />
+              <WhatsApp21stIcon className="w-4 h-4" />
               <span>Commander via WhatsApp ({product.price} DH)</span>
             </a>
 
             {/* Secondary Action: Add to Cart (COD Checkout) */}
             <button
               onClick={handleAddToCart}
-              className="w-full py-3.5 bg-white hover:bg-zinc-50 text-zinc-900 border border-zinc-300 text-xs uppercase tracking-[0.2em] font-medium transition-colors flex items-center justify-center gap-2"
+              className="w-full py-3.5 bg-white hover:bg-zinc-50 text-zinc-900 border border-zinc-300 text-xs uppercase tracking-[0.2em] font-medium transition-colors flex items-center justify-center gap-2 cursor-pointer"
             >
-              <ShoppingBag className="w-4 h-4 stroke-[1.5]" />
+              <LuxuryToteIcon className="w-4 h-4 stroke-[1.25]" />
               <span>{addedNotice ? '✓ Ajouté au panier !' : 'Ajouter au Panier (COD)'}</span>
             </button>
 
             {/* Trust Info */}
             <div className="pt-3 flex items-center justify-between text-[11px] text-zinc-500">
               <div className="flex items-center gap-1.5">
-                <Truck className="w-3.5 h-3.5 text-zinc-400" />
+                <CourierBoxIcon className="w-3.5 h-3.5 text-zinc-400" />
                 <span>Casablanca & tout le Maroc</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                <BanknoteShieldIcon className="w-3.5 h-3.5 text-zinc-700" />
                 <span>Paiement à la livraison</span>
               </div>
             </div>

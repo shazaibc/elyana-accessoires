@@ -2,8 +2,13 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { MapPin, Sparkles, Phone, Clock, Award } from 'lucide-react';
-import { InstagramIcon } from '@/components/icons/InstagramIcon';
+import { MapPin, Clock } from 'lucide-react';
+import {
+  FacetedDiamondIcon,
+  CertifiedHallmarkIcon,
+  Instagram21stIcon,
+  WhatsApp21stIcon
+} from '@/components/icons/LuxuryIcons';
 import { useStore } from '@/context/StoreContext';
 
 export default function AtelierSection() {
@@ -15,7 +20,7 @@ export default function AtelierSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Column: Visual Collage */}
           <div className="relative">
-            <div className="relative aspect-[4/5] w-full max-w-md mx-auto bg-zinc-100 overflow-hidden shadow-xl border border-zinc-100">
+            <div className="relative aspect-[4/5] w-full max-w-md mx-auto bg-zinc-100 overflow-hidden shadow-lg border border-zinc-200">
               <Image
                 src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85"
                 alt="Atelier Elyana Casablanca"
@@ -36,15 +41,15 @@ export default function AtelierSection() {
               </div>
             </div>
 
-            {/* Floating accent card */}
-            <div className="hidden sm:block absolute -bottom-6 -right-6 bg-white p-5 shadow-lg border border-zinc-100 max-w-xs">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-rose-50 flex items-center justify-center text-[#943859]">
-                  <Award className="w-5 h-5" />
+            {/* Floating accent card - Clean 21st.dev style without pills */}
+            <div className="hidden sm:block absolute -bottom-6 -right-6 bg-white p-5 shadow-md border border-zinc-200 max-w-xs">
+              <div className="flex items-start gap-3">
+                <div className="text-[#943859] shrink-0 mt-0.5">
+                  <CertifiedHallmarkIcon className="w-5 h-5 stroke-[1.25]" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold text-zinc-900 uppercase tracking-wider">Acier 316L & Or</p>
-                  <p className="text-[11px] text-zinc-500 font-light">Résistance à l’eau et au parfum certifiée</p>
+                  <p className="text-xs font-medium text-zinc-900 uppercase tracking-wider">Acier 316L & Or</p>
+                  <p className="text-[11px] text-zinc-500 font-light mt-0.5">Résistance certifiée à l’eau et au parfum</p>
                 </div>
               </div>
             </div>
@@ -53,7 +58,7 @@ export default function AtelierSection() {
           {/* Right Column: Narrative */}
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#943859] font-medium">
-              <Sparkles className="w-3.5 h-3.5" />
+              <FacetedDiamondIcon className="w-3.5 h-3.5" />
               <span>Notre Histoire</span>
             </div>
 
@@ -72,9 +77,9 @@ export default function AtelierSection() {
 
             {/* Quick contact / visiting cards */}
             <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-4 bg-white border border-zinc-100">
-                <div className="flex items-center gap-2 text-zinc-900 text-xs font-semibold uppercase tracking-wider mb-1">
-                  <MapPin className="w-4 h-4 text-[#943859]" />
+              <div className="p-4 bg-white border border-zinc-200">
+                <div className="flex items-center gap-2 text-zinc-900 text-xs font-medium uppercase tracking-wider mb-1">
+                  <MapPin className="w-3.5 h-3.5 text-[#943859] stroke-[1.25]" />
                   <span>Adresse</span>
                 </div>
                 <p className="text-xs text-zinc-500 font-light">
@@ -82,9 +87,9 @@ export default function AtelierSection() {
                 </p>
               </div>
 
-              <div className="p-4 bg-white border border-zinc-100">
-                <div className="flex items-center gap-2 text-zinc-900 text-xs font-semibold uppercase tracking-wider mb-1">
-                  <Clock className="w-4 h-4 text-emerald-600" />
+              <div className="p-4 bg-white border border-zinc-200">
+                <div className="flex items-center gap-2 text-zinc-900 text-xs font-medium uppercase tracking-wider mb-1">
+                  <Clock className="w-3.5 h-3.5 text-zinc-700 stroke-[1.25]" />
                   <span>Service Client WhatsApp</span>
                 </div>
                 <p className="text-xs text-zinc-500 font-light">
@@ -94,15 +99,25 @@ export default function AtelierSection() {
             </div>
 
             {/* Instagram link button */}
-            <div className="pt-4">
+            <div className="pt-4 flex flex-wrap gap-3">
               <a
                 href="https://www.instagram.com/elyana_accessoires"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-white border border-zinc-200 hover:border-[#943859] text-zinc-800 hover:text-[#943859] text-xs uppercase tracking-widest font-medium transition-all shadow-xs"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-white border border-zinc-300 hover:border-zinc-900 text-zinc-800 text-xs uppercase tracking-widest font-medium transition-all"
               >
-                <InstagramIcon className="w-4 h-4" />
+                <Instagram21stIcon className="w-4 h-4" />
                 <span>Rejoindre nos 21K+ abonnés sur Instagram</span>
+              </a>
+
+              <a
+                href={`https://wa.me/${settings.whatsappNumber}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3.5 bg-zinc-900 hover:bg-black text-white text-xs uppercase tracking-widest font-medium transition-all"
+              >
+                <WhatsApp21stIcon className="w-4 h-4" />
+                <span>Contacter l’Atelier</span>
               </a>
             </div>
           </div>

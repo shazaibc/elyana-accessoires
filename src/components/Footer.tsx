@@ -3,8 +3,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { MessageCircle, MapPin, ShieldCheck, Heart } from 'lucide-react';
-import { InstagramIcon } from '@/components/icons/InstagramIcon';
+import { MapPin } from 'lucide-react';
+import { Instagram21stIcon, WhatsApp21stIcon } from '@/components/icons/LuxuryIcons';
 import { useStore } from '@/context/StoreContext';
 
 export default function Footer() {
@@ -42,19 +42,19 @@ export default function Footer() {
                 href="https://www.instagram.com/elyana_accessoires"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-600 hover:text-[#943859] hover:border-[#943859] transition-colors"
+                className="w-8 h-8 border border-zinc-200 flex items-center justify-center text-zinc-600 hover:text-[#943859] hover:border-[#943859] transition-colors"
                 title="Instagram @elyana_accessoires"
               >
-                <InstagramIcon className="w-4 h-4" />
+                <Instagram21stIcon className="w-4 h-4" />
               </a>
               <a
                 href={`https://wa.me/${settings.whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full border border-zinc-200 flex items-center justify-center text-emerald-600 hover:bg-emerald-50 transition-colors"
+                className="w-8 h-8 border border-zinc-200 flex items-center justify-center text-emerald-600 hover:bg-emerald-50 transition-colors"
                 title="WhatsApp Direct"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsApp21stIcon className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function Footer() {
                 <span>{settings.location}</span>
               </div>
               <div className="flex items-center gap-2">
-                <MessageCircle className="w-4 h-4 text-emerald-600 shrink-0" />
+                <WhatsApp21stIcon className="w-4 h-4 text-emerald-600 shrink-0" />
                 <a href={`https://wa.me/${settings.whatsappNumber}`} className="hover:underline">
                   WhatsApp : +212 625-857015
                 </a>
