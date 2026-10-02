@@ -4,15 +4,15 @@ import { StoreProvider } from '@/context/StoreContext';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://manad-store.vercel.app'),
-  title: 'MANAD STORE | Haute Joaillerie & Accessoires Casablanca • Maroc',
-  description: 'Maison de bijoux et joaillerie fine à Casablanca. Bagues solitaires, colliers, bracelets et montres de luxe en or, argent 925 et acier chirurgical. Confection sur-mesure & paiement à la livraison (Cash on Delivery) partout au Maroc.',
+  title: 'MANAD STORE | Haute Joaillerie & Accessoires • Maroc',
+  description: 'Maison de haute joaillerie et bijoux raffinés au Maroc. Bagues solitaires, colliers, bracelets et montres de luxe en or, argent 925 et acier chirurgical. Confection sur-mesure & livraison express partout au Maroc avec paiement à la livraison (Cash on Delivery).',
   icons: {
     icon: '/brand/manad-logo.jpg',
     apple: '/brand/manad-logo.jpg',
   },
   openGraph: {
-    title: 'MANAD STORE | Maison de Joaillerie & Accessoires Casablanca',
-    description: 'Bijoux fins et créations sur-mesure à Casablanca. Livraison express dans toutes les villes du Maroc avec paiement à la livraison.',
+    title: 'MANAD STORE | Maison de Joaillerie & Accessoires • Maroc',
+    description: 'Bijoux fins et créations sur-mesure. Livraison express dans tout le Maroc avec paiement en espèces à la livraison.',
     images: ['/brand/manad-logo.jpg'],
     locale: 'fr_FR',
     type: 'website',
@@ -29,7 +29,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/brand/manad-logo.jpg" />
       </head>
-      <body className="min-h-screen bg-white text-zinc-900 font-sans selection:bg-rose-100 selection:text-[#943859]">
+      <body className="min-h-screen bg-white text-zinc-900 font-sans selection:bg-[#FAF3E0] selection:text-[#B89047]">
         <StoreProvider>
           {children}
         </StoreProvider>

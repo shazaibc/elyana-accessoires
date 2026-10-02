@@ -3,9 +3,9 @@ import { Product, StoreSettings } from '@/types';
 export const DEFAULT_SETTINGS: StoreSettings = {
   whatsappNumber: '212625857015',
   storeName: 'Manad Store',
-  location: 'Casablanca, Boulevard Al Qods / Dakhla, Maroc',
+  location: 'Partout au Maroc (Livraison Nationale Express)',
   announcementText: 'Livraison Express dans tout le Maroc • Paiement à la livraison (Cash on Delivery) • Satisfait ou remboursé',
-  deliveryTimeCasablanca: 'Moins de 24h',
+  deliveryTimeCasablanca: '24h',
   deliveryTimeMorocco: '24h à 48h'
 };
 

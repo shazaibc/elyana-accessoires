@@ -18,6 +18,7 @@ interface ProductModalProps {
 }
 
 const MOROCCO_CITIES = [
+  'Toutes les villes du Maroc',
   'Casablanca',
   'Rabat',
   'Marrakech',
@@ -40,7 +41,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
 
   const [selectedSize, setSelectedSize] = useState<string>('');
   const [selectedImage, setSelectedImage] = useState<string>('');
-  const [selectedCity, setSelectedCity] = useState<string>('Casablanca');
+  const [selectedCity, setSelectedCity] = useState<string>('Toutes les villes du Maroc');
   const [addedNotice, setAddedNotice] = useState(false);
 
   useEffect(() => {
@@ -88,7 +89,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             {product.bestseller && (
-              <span className="absolute top-3 left-3 bg-white/95 text-[10px] uppercase tracking-wider font-semibold text-[#943859] px-2.5 py-1 border border-rose-100">
+              <span className="absolute top-3 left-3 bg-white/95 text-[10px] uppercase tracking-wider font-semibold text-[#B89047] px-2.5 py-1 border border-[#EADBBE]">
                 Pièce Bestseller
               </span>
             )}
@@ -102,7 +103,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                   key={i}
                   onClick={() => setSelectedImage(img)}
                   className={`relative w-16 h-16 shrink-0 border overflow-hidden transition-all ${
-                    selectedImage === img ? 'border-[#943859] ring-1 ring-[#943859]' : 'border-zinc-200 opacity-70 hover:opacity-100'
+                    selectedImage === img ? 'border-[#B89047] ring-1 ring-[#B89047]' : 'border-zinc-200 opacity-70 hover:opacity-100'
                   }`}
                 >
                   <Image src={img} alt={`Aperçu ${i + 1}`} fill className="object-cover" />
@@ -116,7 +117,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
         <div className="md:w-1/2 p-6 sm:p-8 flex flex-col justify-between overflow-y-auto">
           <div>
             {/* Category & Material Tag */}
-            <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#943859] font-medium mb-1">
+            <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#B89047] font-medium mb-1">
               <span>{product.category}</span>
               <span>•</span>
               <span>{product.material}</span>
@@ -153,7 +154,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
             <div className="mt-6">
               <div className="flex items-center justify-between text-xs uppercase tracking-wider text-zinc-700 font-medium mb-2.5">
                 <span>Choisir votre taille / format :</span>
-                <span className="text-[#943859] lowercase text-[11px] font-normal cursor-pointer hover:underline">
+                <span className="text-[#B89047] lowercase text-[11px] font-normal cursor-pointer hover:underline">
                   Guide des tailles
                 </span>
               </div>
@@ -186,7 +187,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
               >
                 {MOROCCO_CITIES.map((c) => (
                   <option key={c} value={c}>
-                    {c} {c === 'Casablanca' ? '(Livraison Express <24h)' : '(24h-48h)'}
+                    {c} (Livraison Express 24h-48h)
                   </option>
                 ))}
               </select>
@@ -218,8 +219,8 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
             {/* Trust Info */}
             <div className="pt-3 flex items-center justify-between text-[11px] text-zinc-500">
               <div className="flex items-center gap-1.5">
-                <CourierBoxIcon className="w-3.5 h-3.5 text-zinc-400" />
-                <span>Casablanca & tout le Maroc</span>
+                <CourierBoxIcon className="w-3.5 h-3.5 text-[#B89047]" />
+                <span>Livraison Partout au Maroc (24h-48h)</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <BanknoteShieldIcon className="w-3.5 h-3.5 text-zinc-700" />

@@ -23,20 +23,20 @@ export default function AtelierSection() {
             <div className="relative aspect-[4/5] w-full max-w-md mx-auto bg-zinc-100 overflow-hidden shadow-lg border border-zinc-200">
               <Image
                 src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85"
-                alt="Atelier Manad Store Casablanca"
+                alt="Atelier Manad Store Maroc"
                 fill
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-white">
                 <span className="text-[10px] uppercase tracking-widest bg-white/20 backdrop-blur-xs px-2.5 py-1 border border-white/30 inline-block mb-2">
-                  Casablanca, Maroc
+                  Royaume du Maroc
                 </span>
                 <p className="font-serif text-lg font-light">
-                  Boulevard Al Qods (Bd Dakhla)
+                  Livraison Express Nationale
                 </p>
                 <p className="text-xs text-white/80 font-light mt-0.5">
-                  Point de retrait & atelier de préparation
+                  Expédition rapide 24h à 48h dans toutes les villes
                 </p>
               </div>
             </div>
@@ -44,7 +44,7 @@ export default function AtelierSection() {
             {/* Floating accent card - Clean 21st.dev style without pills */}
             <div className="hidden sm:block absolute -bottom-6 -right-6 bg-white p-5 shadow-md border border-zinc-200 max-w-xs">
               <div className="flex items-start gap-3">
-                <div className="text-[#943859] shrink-0 mt-0.5">
+                <div className="text-[#B89047] shrink-0 mt-0.5">
                   <CertifiedHallmarkIcon className="w-5 h-5 stroke-[1.25]" />
                 </div>
                 <div>
@@ -57,14 +57,14 @@ export default function AtelierSection() {
 
           {/* Right Column: Narrative */}
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#943859] font-medium">
+            <div className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#B89047] font-medium">
               <FacetedDiamondIcon className="w-3.5 h-3.5" />
               <span>Notre Histoire</span>
             </div>
 
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-zinc-900 tracking-tight leading-tight">
-              Façonné à Casablanca, <br />
-              <span className="italic font-normal text-zinc-800">Livré chez vous</span> partout au Maroc.
+              Haute Joaillerie & Raffinement, <br />
+              <span className="italic font-normal text-zinc-800">Livrés chez vous</span> partout au Maroc.
             </h2>
 
             <p className="text-zinc-600 font-light text-sm sm:text-base leading-relaxed">
@@ -72,15 +72,15 @@ export default function AtelierSection() {
             </p>
 
             <p className="text-zinc-600 font-light text-sm sm:text-base leading-relaxed">
-              Que vous soyez à <strong>Casablanca, Rabat, Marrakech, Tanger, Fès ou Agadir</strong>, chaque pièce est vérifiée manuellement avant son expédition dans son écrin protecteur, prête à sublimer votre quotidien ou vos plus belles cérémonies.
+              Où que vous soyez au Maroc — <strong>Rabat, Marrakech, Tanger, Fès, Agadir, Oujda ou toute autre ville</strong> —, chaque pièce est vérifiée manuellement avant son expédition dans son écrin protecteur, prête à sublimer votre quotidien ou vos plus belles cérémonies.
             </p>
 
             {/* Quick contact / visiting cards */}
             <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="p-4 bg-white border border-zinc-200">
                 <div className="flex items-center gap-2 text-zinc-900 text-xs font-medium uppercase tracking-wider mb-1">
-                  <MapPin className="w-3.5 h-3.5 text-[#943859] stroke-[1.25]" />
-                  <span>Adresse</span>
+                  <MapPin className="w-3.5 h-3.5 text-[#B89047] stroke-[1.25]" />
+                  <span>Couverture</span>
                 </div>
                 <p className="text-xs text-zinc-500 font-light">
                   {settings.location}

@@ -4,9 +4,10 @@
   :root {
     --background: #ffffff;
     --foreground: #18181b;
-    --blush: #fdf2f4;
-    --rose-accent: #b75d7b;
-    --gold-accent: #c5a880;
+    --gold-subtle: #faf6ef;
+    --gold-accent: #b89047;
+    --gold-hover: #9e7b35;
+    --gold-border: #eadbbe;
   }
 
   body {
@@ -70,5 +71,5 @@
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #b75d7b;
+  background: #b89047;
 }

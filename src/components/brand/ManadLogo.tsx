@@ -33,8 +33,8 @@ export function ManadLogo({ size = 'md', showSubtitle = true, className = '' }: 
           MANAD
         </span>
         {showSubtitle && (
-          <span className={`block ${dimensions.sub} uppercase tracking-[0.38em] text-zinc-400 font-medium mt-1`}>
-            STORE • CASABLANCA
+          <span className={`block ${dimensions.sub} uppercase tracking-[0.38em] text-[#B89047] font-medium mt-1`}>
+            STORE • MAROC
           </span>
         )}
       </div>

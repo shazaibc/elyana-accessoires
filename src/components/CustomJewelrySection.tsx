@@ -29,6 +29,7 @@ const BUDGET_OPTIONS = [
 ];
 
 const MOROCCO_CITIES = [
+  'Toutes les villes du Maroc',
   'Casablanca',
   'Rabat',
   'Marrakech',
@@ -78,7 +79,7 @@ export default function CustomJewelrySection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#943859] font-medium mb-3">
+          <div className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#B89047] font-medium mb-3">
             <AtelierCompassIcon className="w-3.5 h-3.5" />
             <span>Atelier de Confection</span>
           </div>
@@ -94,7 +95,7 @@ export default function CustomJewelrySection() {
         {/* Studio Process Steps */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto">
           <div className="p-6 bg-zinc-50/70 border border-zinc-100 text-center">
-            <span className="w-8 h-8 rounded-full bg-white text-[#943859] border border-rose-200 inline-flex items-center justify-center font-serif text-sm font-semibold mb-3">
+            <span className="w-8 h-8 rounded-full bg-white text-[#B89047] border border-[#EADBBE] inline-flex items-center justify-center font-serif text-sm font-semibold mb-3">
               1
             </span>
             <h3 className="font-serif text-base text-zinc-900 font-normal">Définissez Votre Idée</h3>
@@ -104,28 +105,28 @@ export default function CustomJewelrySection() {
           </div>
 
           <div className="p-6 bg-zinc-50/70 border border-zinc-100 text-center">
-            <span className="w-8 h-8 rounded-full bg-white text-[#943859] border border-rose-200 inline-flex items-center justify-center font-serif text-sm font-semibold mb-3">
+            <span className="w-8 h-8 rounded-full bg-white text-[#B89047] border border-[#EADBBE] inline-flex items-center justify-center font-serif text-sm font-semibold mb-3">
               2
             </span>
             <h3 className="font-serif text-base text-zinc-900 font-normal">Échange WhatsApp</h3>
             <p className="text-xs text-zinc-500 font-light mt-1.5 leading-relaxed">
-              Validation des maquettes, calligraphies et photos d’échantillons avec Yasmine.
+              Validation des maquettes, calligraphies et photos d’échantillons avec nos artisans.
             </p>
           </div>
 
           <div className="p-6 bg-zinc-50/70 border border-zinc-100 text-center">
-            <span className="w-8 h-8 rounded-full bg-white text-[#943859] border border-rose-200 inline-flex items-center justify-center font-serif text-sm font-semibold mb-3">
+            <span className="w-8 h-8 rounded-full bg-white text-[#B89047] border border-[#EADBBE] inline-flex items-center justify-center font-serif text-sm font-semibold mb-3">
               3
             </span>
             <h3 className="font-serif text-base text-zinc-900 font-normal">Façonnage & Livraison</h3>
             <p className="text-xs text-zinc-500 font-light mt-1.5 leading-relaxed">
-              Confection soignée et livraison sécurisée à domicile avec paiement Cash on Delivery.
+              Confection soignée et livraison sécurisée dans tout le Maroc avec paiement Cash on Delivery.
             </p>
           </div>
         </div>
 
         {/* Interactive Custom Order Form */}
-        <div className="bg-[#FAF7F8]/60 border border-rose-100 p-6 sm:p-10 md:p-12 max-w-4xl mx-auto">
+        <div className="bg-[#FAF6EF]/50 border border-[#EADBBE] p-6 sm:p-10 md:p-12 max-w-4xl mx-auto">
           <form onSubmit={handleSubmit} className="space-y-8">
             {/* Step 1: Piece Type Selection */}
             <div>
@@ -278,7 +279,7 @@ export default function CustomJewelrySection() {
                 <span>Transmettre mon Projet sur WhatsApp</span>
               </button>
               <p className="text-[11px] text-zinc-400 mt-3 font-light">
-                Message personnalisé généré automatiquement à destination de notre atelier à Casablanca.
+                Message personnalisé généré automatiquement à destination de notre atelier de joaillerie.
               </p>
             </div>
           </form>

@@ -41,7 +41,7 @@ export default function Header({ onSelectCategory, onOpenCustomSection }: Header
       {/* Top Luxury Announcement Ticker */}
       <div className="bg-[#FAFAFA] border-b border-zinc-100 py-2 px-4 text-center text-xs tracking-wider text-zinc-600 flex items-center justify-center gap-3">
         <span className="inline-flex items-center gap-2 font-medium text-zinc-800">
-          <FacetedDiamondIcon className="w-3 h-3 text-[#943859]" />
+          <FacetedDiamondIcon className="w-3 h-3 text-[#B89047]" />
           {cleanAnnouncement}
         </span>
         <span className="hidden md:inline-block text-zinc-300">/</span>
@@ -68,31 +68,31 @@ export default function Header({ onSelectCategory, onOpenCustomSection }: Header
           <nav className="hidden lg:flex items-center gap-8">
             <button
               onClick={() => onSelectCategory && onSelectCategory('all')}
-              className="text-xs uppercase tracking-[0.2em] text-zinc-700 hover:text-[#943859] transition-colors py-2 font-medium cursor-pointer"
+              className="text-xs uppercase tracking-[0.2em] text-zinc-700 hover:text-[#B89047] transition-colors py-2 font-medium cursor-pointer"
             >
               Collection
             </button>
             <button
               onClick={() => onSelectCategory && onSelectCategory('bagues')}
-              className="text-xs uppercase tracking-[0.2em] text-zinc-700 hover:text-[#943859] transition-colors py-2 font-medium cursor-pointer"
+              className="text-xs uppercase tracking-[0.2em] text-zinc-700 hover:text-[#B89047] transition-colors py-2 font-medium cursor-pointer"
             >
               Bagues
             </button>
             <button
               onClick={() => onSelectCategory && onSelectCategory('colliers')}
-              className="text-xs uppercase tracking-[0.2em] text-zinc-700 hover:text-[#943859] transition-colors py-2 font-medium cursor-pointer"
+              className="text-xs uppercase tracking-[0.2em] text-zinc-700 hover:text-[#B89047] transition-colors py-2 font-medium cursor-pointer"
             >
               Colliers
             </button>
             <button
               onClick={() => onSelectCategory && onSelectCategory('bracelets')}
-              className="text-xs uppercase tracking-[0.2em] text-zinc-700 hover:text-[#943859] transition-colors py-2 font-medium cursor-pointer"
+              className="text-xs uppercase tracking-[0.2em] text-zinc-700 hover:text-[#B89047] transition-colors py-2 font-medium cursor-pointer"
             >
               Bracelets
             </button>
             <button
               onClick={() => onOpenCustomSection && onOpenCustomSection()}
-              className="text-xs uppercase tracking-[0.2em] font-medium text-[#943859] hover:text-zinc-900 transition-colors py-2 border-b border-[#943859]/40 cursor-pointer"
+              className="text-xs uppercase tracking-[0.2em] font-medium text-[#B89047] hover:text-zinc-900 transition-colors py-2 border-b border-[#B89047]/40 cursor-pointer"
             >
               Sur-Mesure
             </button>
@@ -111,11 +111,11 @@ export default function Header({ onSelectCategory, onOpenCustomSection }: Header
                 />
               </div>
               <div className="text-left">
-                <span className="block font-serif text-xl sm:text-2xl font-light tracking-[0.22em] text-zinc-900 group-hover:text-[#943859] transition-colors">
+                <span className="block font-serif text-xl sm:text-2xl font-light tracking-[0.22em] text-zinc-900 group-hover:text-[#B89047] transition-colors">
                   MANAD
                 </span>
-                <span className="block text-[8px] uppercase tracking-[0.38em] text-zinc-400 font-medium -mt-0.5">
-                  STORE • CASABLANCA
+                <span className="block text-[8px] uppercase tracking-[0.38em] text-[#B89047] font-medium -mt-0.5">
+                  STORE • MAROC
                 </span>
               </div>
             </Link>
@@ -147,7 +147,7 @@ export default function Header({ onSelectCategory, onOpenCustomSection }: Header
             {/* Cart Button */}
             <button
               onClick={() => setIsCartOpen(true)}
-              className="relative p-2 text-zinc-800 hover:text-[#943859] transition-colors cursor-pointer"
+              className="relative p-2 text-zinc-800 hover:text-[#B89047] transition-colors cursor-pointer"
               aria-label="Panier d'achats"
             >
               <LuxuryToteIcon className="w-5 h-5 stroke-[1.25]" />
@@ -175,7 +175,7 @@ export default function Header({ onSelectCategory, onOpenCustomSection }: Header
                   onSelectCategory && onSelectCategory(cat.value);
                   setMobileMenuOpen(false);
                 }}
-                className="text-left text-xs uppercase tracking-wider py-2.5 px-3 border border-zinc-100 hover:border-zinc-300 text-zinc-700 hover:text-[#943859] transition-colors"
+                className="text-left text-xs uppercase tracking-wider py-2.5 px-3 border border-zinc-100 hover:border-zinc-300 text-zinc-700 hover:text-[#B89047] transition-colors"
               >
                 {cat.label}
               </button>

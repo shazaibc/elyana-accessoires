@@ -25,7 +25,7 @@ export default function ProductMarquee({ onSelectProduct }: ProductMarqueeProps)
   return (
     <section className="py-16 bg-[#FAFAFA] border-y border-zinc-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center">
-        <div className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#943859] font-medium mb-3">
+        <div className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#B89047] font-medium mb-3">
           <FacetedDiamondIcon className="w-3.5 h-3.5" />
           <span>Sélection Coup de Cœur</span>
         </div>
@@ -43,7 +43,7 @@ export default function ProductMarquee({ onSelectProduct }: ProductMarqueeProps)
           {loopTrackOne.map((product, idx) => (
             <div
               key={`row1-${product.id}-${idx}`}
-              className="w-64 sm:w-72 shrink-0 bg-white border border-zinc-100 hover:border-rose-200 transition-all duration-300 group rounded-none flex flex-col"
+              className="w-64 sm:w-72 shrink-0 bg-white border border-zinc-100 hover:border-[#EADBBE] transition-all duration-300 group rounded-none flex flex-col"
             >
               {/* Image Container */}
               <div 
@@ -58,7 +58,7 @@ export default function ProductMarquee({ onSelectProduct }: ProductMarqueeProps)
                   sizes="288px"
                 />
                 {product.bestseller && (
-                  <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[10px] uppercase tracking-wider font-medium text-[#943859] px-2 py-0.5 border border-rose-100">
+                  <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[10px] uppercase tracking-wider font-medium text-[#B89047] px-2 py-0.5 border border-[#EADBBE]">
                     Bestseller
                   </span>
                 )}
@@ -84,7 +84,7 @@ export default function ProductMarquee({ onSelectProduct }: ProductMarqueeProps)
                   </span>
                   <h3 
                     onClick={() => onSelectProduct(product)}
-                    className="font-serif text-sm text-zinc-900 line-clamp-1 mt-0.5 cursor-pointer hover:text-[#943859] transition-colors"
+                    className="font-serif text-sm text-zinc-900 line-clamp-1 mt-0.5 cursor-pointer hover:text-[#B89047] transition-colors"
                   >
                     {product.name}
                   </h3>
@@ -117,7 +117,7 @@ export default function ProductMarquee({ onSelectProduct }: ProductMarqueeProps)
           {loopTrackTwo.map((product, idx) => (
             <div
               key={`row2-${product.id}-${idx}`}
-              className="w-64 sm:w-72 shrink-0 bg-white border border-zinc-100 hover:border-rose-200 transition-all duration-300 group rounded-none flex flex-col"
+              className="w-64 sm:w-72 shrink-0 bg-white border border-zinc-100 hover:border-[#EADBBE] transition-all duration-300 group rounded-none flex flex-col"
             >
               {/* Image Container */}
               <div 
@@ -158,7 +158,7 @@ export default function ProductMarquee({ onSelectProduct }: ProductMarqueeProps)
                   </span>
                   <h3 
                     onClick={() => onSelectProduct(product)}
-                    className="font-serif text-sm text-zinc-900 line-clamp-1 mt-0.5 cursor-pointer hover:text-[#943859] transition-colors"
+                    className="font-serif text-sm text-zinc-900 line-clamp-1 mt-0.5 cursor-pointer hover:text-[#B89047] transition-colors"
                   >
                     {product.name}
                   </h3>

@@ -23,9 +23,9 @@ export default function Hero({ onExploreClick, onCustomClick }: HeroProps) {
         <div className="flex items-center justify-center gap-3 mb-8">
           <span className="h-px w-8 bg-zinc-200" />
           <div className="flex items-center gap-2">
-            <FacetedDiamondIcon className="w-3.5 h-3.5 text-[#943859]" />
-            <span className="text-[11px] uppercase tracking-[0.3em] text-zinc-500 font-medium">
-              Maison de Joaillerie • MANAD STORE • Casablanca
+            <FacetedDiamondIcon className="w-3.5 h-3.5 text-[#B89047]" />
+            <span className="text-[11px] uppercase tracking-[0.3em] text-[#B89047] font-medium">
+              Maison de Joaillerie • MANAD STORE • Maroc
             </span>
           </div>
           <span className="h-px w-8 bg-zinc-200" />
@@ -40,7 +40,7 @@ export default function Hero({ onExploreClick, onCustomClick }: HeroProps) {
         {/* Concise, non-dense subtitle */}
         <p className="max-w-2xl mx-auto text-base sm:text-lg text-zinc-500 font-light leading-relaxed mb-12">
           Créations joaillières raffinées en acier inoxydable 316L, argent 925 et or. 
-          Commandez directement via WhatsApp avec <span className="text-zinc-800 font-normal">paiement à la livraison</span> dans toutes les villes du Maroc.
+          Commandez directement via WhatsApp avec <span className="text-zinc-800 font-normal">paiement à la livraison</span> partout au Maroc.
         </p>
 
         {/* Call-to-actions */}
@@ -55,9 +55,9 @@ export default function Hero({ onExploreClick, onCustomClick }: HeroProps) {
 
           <button
             onClick={onCustomClick}
-            className="w-full sm:w-auto px-8 py-4 bg-white hover:bg-zinc-50 text-zinc-900 border border-zinc-300 hover:border-zinc-900 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer"
+            className="w-full sm:w-auto px-8 py-4 bg-white hover:bg-[#FAF6EF] text-zinc-900 border border-[#EADBBE] hover:border-[#B89047] text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer"
           >
-            <AtelierCompassIcon className="w-4 h-4 text-[#943859]" />
+            <AtelierCompassIcon className="w-4 h-4 text-[#B89047]" />
             <span>Création Sur-Mesure</span>
           </button>
         </div>
@@ -66,20 +66,20 @@ export default function Hero({ onExploreClick, onCustomClick }: HeroProps) {
         <div className="border-t border-b border-zinc-100 py-8 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-4 max-w-4xl mx-auto">
           {/* Item 1 */}
           <div className="flex flex-col items-center text-center px-4">
-            <div className="text-[#943859] mb-3">
+            <div className="text-[#B89047] mb-3">
               <CourierBoxIcon className="w-5 h-5 stroke-[1.25]" />
             </div>
             <p className="text-xs uppercase tracking-widest font-medium text-zinc-900">
-              Livraison Express Maroc
+              Livraison Express Nationale
             </p>
             <p className="text-[11px] text-zinc-400 font-light mt-1">
-              Casablanca sous 24h • Autres villes 24-48h
+              Partout au Maroc en 24h à 48h
             </p>
           </div>
 
           {/* Item 2 */}
           <div className="flex flex-col items-center text-center px-4 sm:border-x sm:border-zinc-100">
-            <div className="text-[#943859] mb-3">
+            <div className="text-[#B89047] mb-3">
               <BanknoteShieldIcon className="w-5 h-5 stroke-[1.25]" />
             </div>
             <p className="text-xs uppercase tracking-widest font-medium text-zinc-900">
@@ -92,7 +92,7 @@ export default function Hero({ onExploreClick, onCustomClick }: HeroProps) {
 
           {/* Item 3 */}
           <div className="flex flex-col items-center text-center px-4">
-            <div className="text-[#943859] mb-3">
+            <div className="text-[#B89047] mb-3">
               <CertifiedHallmarkIcon className="w-5 h-5 stroke-[1.25]" />
             </div>
             <p className="text-xs uppercase tracking-widest font-medium text-zinc-900">

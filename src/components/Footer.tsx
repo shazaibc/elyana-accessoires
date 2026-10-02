@@ -29,8 +29,8 @@ export default function Footer() {
                 <span className="font-serif text-lg font-light tracking-[0.22em] text-zinc-900">
                   MANAD
                 </span>
-                <span className="block text-[8px] uppercase tracking-[0.38em] text-zinc-400 font-medium">
-                  STORE • CASABLANCA
+                <span className="block text-[8px] uppercase tracking-[0.38em] text-[#B89047] font-medium">
+                  STORE • MAROC
                 </span>
               </div>
             </div>
@@ -42,7 +42,7 @@ export default function Footer() {
                 href="https://www.instagram.com/elyana_accessoires"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 border border-zinc-200 flex items-center justify-center text-zinc-600 hover:text-[#943859] hover:border-[#943859] transition-colors"
+                className="w-8 h-8 border border-zinc-200 flex items-center justify-center text-zinc-600 hover:text-[#B89047] hover:border-[#B89047] transition-colors"
                 title="Instagram Officiel"
               >
                 <Instagram21stIcon className="w-4 h-4" />
@@ -100,12 +100,12 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs text-zinc-500 font-light">
               <li>
-                <a href="#custom-jewelry" className="hover:text-[#943859] transition-colors">
-                  ✨ Confection de Bijou Sur-Mesure
+                <a href="#custom-jewelry" className="hover:text-[#B89047] transition-colors">
+                  Confection de Bijou Sur-Mesure
                 </a>
               </li>
               <li>
-                <a href="#custom-jewelry" className="hover:text-[#943859] transition-colors">
+                <a href="#custom-jewelry" className="hover:text-[#B89047] transition-colors">
                   Gravure & Prénoms Calligraphiés
                 </a>
               </li>
@@ -124,11 +124,11 @@ export default function Footer() {
           {/* Contact & Boutique */}
           <div>
             <h4 className="text-xs uppercase tracking-widest text-zinc-900 font-semibold mb-4">
-              Boutique Casablanca
+              Service & Expédition
             </h4>
             <div className="space-y-3 text-xs text-zinc-500 font-light">
               <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-[#943859] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#B89047] shrink-0 mt-0.5" />
                 <span>{settings.location}</span>
               </div>
               <div className="flex items-center gap-2">
@@ -151,7 +151,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-zinc-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-zinc-400 font-light">
-          <p>© {new Date().getFullYear()} Manad Store. Tous droits réservés. Casablanca, Maroc.</p>
+          <p>© {new Date().getFullYear()} Manad Store. Tous droits réservés. Royaume du Maroc.</p>
           <p className="flex items-center gap-1">
             Façonné avec élégance pour la femme marocaine
           </p>

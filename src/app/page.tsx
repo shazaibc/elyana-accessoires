@@ -33,7 +33,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-white flex flex-col selection:bg-rose-100 selection:text-[#943859]">
+    <div className="min-h-screen bg-white flex flex-col selection:bg-[#FAF3E0] selection:text-[#B89047]">
       {/* Sticky Header with Navigation & Cart */}
       <Header
         onSelectCategory={scrollToCatalog}
@@ -66,7 +66,7 @@ export default function HomePage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent group-hover:from-black/70 transition-colors" />
               <div className="absolute bottom-8 left-8 right-8 text-white">
-                <span className="text-[10px] uppercase tracking-[0.25em] text-rose-200 block mb-1">
+                <span className="text-[10px] uppercase tracking-[0.25em] text-[#EADBBE] block mb-1">
                   Collection
                 </span>
                 <h3 className="font-serif text-2xl font-light">Bagues & Solitaires</h3>
@@ -90,7 +90,7 @@ export default function HomePage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent group-hover:from-black/70 transition-colors" />
               <div className="absolute bottom-8 left-8 right-8 text-white">
-                <span className="text-[10px] uppercase tracking-[0.25em] text-rose-200 block mb-1">
+                <span className="text-[10px] uppercase tracking-[0.25em] text-[#EADBBE] block mb-1">
                   Collection
                 </span>
                 <h3 className="font-serif text-2xl font-light">Colliers & Sautoirs</h3>
@@ -114,7 +114,7 @@ export default function HomePage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent group-hover:from-black/70 transition-colors" />
               <div className="absolute bottom-8 left-8 right-8 text-white">
-                <span className="text-[10px] uppercase tracking-[0.25em] text-rose-200 block mb-1">
+                <span className="text-[10px] uppercase tracking-[0.25em] text-[#EADBBE] block mb-1">
                   Collection
                 </span>
                 <h3 className="font-serif text-2xl font-light">Bracelets & Joncs</h3>
@@ -138,7 +138,7 @@ export default function HomePage() {
       {/* Custom Jewelry Atelier Request Section */}
       <CustomJewelrySection />
 
-      {/* Atelier & Casablanca Heritage Section */}
+      {/* Atelier & Maison Heritage Section */}
       <AtelierSection />
 
       {/* Footer */}

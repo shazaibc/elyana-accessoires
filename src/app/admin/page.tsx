@@ -204,7 +204,7 @@ export default function AdminPage() {
     return (
       <div className="min-h-screen bg-zinc-50 flex items-center justify-center p-4">
         <div className="w-full max-w-md bg-white p-8 border border-zinc-200 shadow-xl text-center">
-          <div className="w-12 h-12 rounded-full bg-rose-50 text-[#943859] mx-auto flex items-center justify-center mb-4">
+          <div className="w-12 h-12 rounded-full bg-[#FAF6EF] text-[#B89047] border border-[#EADBBE] mx-auto flex items-center justify-center mb-4">
             <Lock className="w-5 h-5" />
           </div>
 
@@ -393,7 +393,7 @@ export default function AdminPage() {
                 <th className="py-3 px-4">Prix (DH)</th>
                 <th className="py-3 px-4">Tailles</th>
                 <th className="py-3 px-4">
-                  <span className="inline-flex items-center gap-1 text-[#943859]">
+                  <span className="inline-flex items-center gap-1 text-[#B89047]">
                     Stock (Admin)
                   </span>
                 </th>
@@ -424,7 +424,7 @@ export default function AdminPage() {
                           </p>
                           <div className="flex items-center gap-2 mt-0.5">
                             {p.bestseller && (
-                              <span className="text-[9px] bg-rose-50 text-[#943859] px-1.5 py-0.2 rounded-xs font-medium">
+                              <span className="text-[9px] bg-[#FAF6EF] text-[#B89047] px-1.5 py-0.2 rounded-xs font-medium border border-[#EADBBE]">
                                 Bestseller
                               </span>
                             )}
@@ -622,7 +622,7 @@ export default function AdminPage() {
                 </div>
 
                 <div>
-                  <label className="block uppercase tracking-wider text-[#943859] font-bold mb-1">
+                  <label className="block uppercase tracking-wider text-[#B89047] font-bold mb-1">
                     Stock (Visible Admin Seul) :
                   </label>
                   <input
@@ -631,7 +631,7 @@ export default function AdminPage() {
                     min={0}
                     value={formData.stock}
                     onChange={(e) => setFormData({ ...formData, stock: Number(e.target.value) })}
-                    className="w-full px-3 py-2 bg-rose-50/50 border border-rose-200 focus:outline-none focus:border-rose-400 font-bold"
+                    className="w-full px-3 py-2 bg-[#FAF6EF] border border-[#EADBBE] focus:outline-none focus:border-[#B89047] font-bold"
                   />
                 </div>
               </div>
@@ -759,7 +759,7 @@ export default function AdminPage() {
 
               <div>
                 <label className="block uppercase tracking-wider text-zinc-700 font-semibold mb-1">
-                  Adresse & Showroom :
+                  Zone de Livraison & Adresse :
                 </label>
                 <input
                   type="text"

@@ -195,7 +195,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   };
 
   // WhatsApp Helpers
-  const getWhatsAppOrderUrl = (product: Product, selectedSize: string, clientCity = 'Casablanca') => {
+  const getWhatsAppOrderUrl = (product: Product, selectedSize: string, clientCity = 'Maroc') => {
     const phone = settings.whatsappNumber;
     const text = 
 `Bonjour Manad Store,

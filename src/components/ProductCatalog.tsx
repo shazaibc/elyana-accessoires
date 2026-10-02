@@ -66,7 +66,7 @@ export default function ProductCatalog({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#943859] font-medium mb-3">
+          <div className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#B89047] font-medium mb-3">
             <FacetedDiamondIcon className="w-3.5 h-3.5" />
             <span>Catalogue Exclusif</span>
           </div>
@@ -201,7 +201,7 @@ export default function ProductCatalog({
                   {/* Badges */}
                   <div className="absolute top-3 left-3 flex flex-col gap-1.5 pointer-events-none">
                     {product.bestseller && (
-                      <span className="bg-white/95 text-[10px] uppercase tracking-wider font-medium text-[#943859] px-2.5 py-0.5 border border-rose-100 shadow-xs">
+                      <span className="bg-white/95 text-[10px] uppercase tracking-wider font-medium text-[#B89047] px-2.5 py-0.5 border border-[#EADBBE] shadow-xs">
                         Bestseller
                       </span>
                     )}
@@ -218,11 +218,11 @@ export default function ProductCatalog({
                       e.stopPropagation();
                       toggleWishlist(product.id);
                     }}
-                    className="absolute top-3 right-3 p-2 rounded-full bg-white/90 text-zinc-600 hover:text-[#943859] shadow-sm hover:scale-110 transition-all"
+                    className="absolute top-3 right-3 p-2 rounded-full bg-white/90 text-zinc-600 hover:text-[#B89047] shadow-sm hover:scale-110 transition-all"
                     aria-label="Ajouter aux favoris"
                   >
                     <Heart
-                      className={`w-4 h-4 ${isFav ? 'fill-[#943859] text-[#943859]' : 'stroke-[1.5]'}`}
+                      className={`w-4 h-4 ${isFav ? 'fill-[#B89047] text-[#B89047]' : 'stroke-[1.5]'}`}
                     />
                   </button>
 
@@ -253,7 +253,7 @@ export default function ProductCatalog({
 
                     <h3
                       onClick={() => onSelectProduct(product)}
-                      className="font-serif text-base text-zinc-900 hover:text-[#943859] transition-colors cursor-pointer line-clamp-1"
+                      className="font-serif text-base text-zinc-900 hover:text-[#B89047] transition-colors cursor-pointer line-clamp-1"
                     >
                       {product.name}
                     </h3>

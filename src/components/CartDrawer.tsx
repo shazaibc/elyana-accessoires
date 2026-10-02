@@ -11,6 +11,7 @@ import {
 } from '@/components/icons/LuxuryIcons';
 
 const MOROCCO_CITIES = [
+  'Toutes les villes du Maroc',
   'Casablanca',
   'Rabat',
   'Marrakech',
@@ -37,7 +38,7 @@ export default function CartDrawer() {
 
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
-  const [city, setCity] = useState('Casablanca');
+  const [city, setCity] = useState('Toutes les villes du Maroc');
   const [address, setAddress] = useState('');
   const [showCheckoutForm, setShowCheckoutForm] = useState(false);
 
@@ -227,7 +228,7 @@ export default function CartDrawer() {
                 >
                   {MOROCCO_CITIES.map((c) => (
                     <option key={c} value={c}>
-                      {c} {c === 'Casablanca' ? '(Livraison <24h)' : '(24h-48h)'}
+                      {c} (Livraison Express 24h-48h)
                     </option>
                   ))}
                 </select>
