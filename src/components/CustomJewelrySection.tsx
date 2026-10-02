@@ -58,7 +58,7 @@ export default function CustomJewelrySection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const url = getWhatsAppCustomRequestUrl({
-      fullName: fullName || 'Client Elyana',
+      fullName: fullName || 'Client Manad Store',
       phone: phone || 'Non renseigné',
       city,
       pieceType,

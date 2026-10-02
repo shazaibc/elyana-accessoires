@@ -32,10 +32,10 @@ interface StoreContextType {
 const StoreContext = createContext<StoreContextType | undefined>(undefined);
 
 const STORAGE_KEYS = {
-  PRODUCTS: 'elyana_products_v1',
-  SETTINGS: 'elyana_settings_v1',
-  CART: 'elyana_cart_v1',
-  WISHLIST: 'elyana_wishlist_v1',
+  PRODUCTS: 'manad_products_v1',
+  SETTINGS: 'manad_settings_v1',
+  CART: 'manad_cart_v1',
+  WISHLIST: 'manad_wishlist_v1',
 };
 
 export function StoreProvider({ children }: { children: React.ReactNode }) {
@@ -198,7 +198,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   const getWhatsAppOrderUrl = (product: Product, selectedSize: string, clientCity = 'Casablanca') => {
     const phone = settings.whatsappNumber;
     const text = 
-`Bonjour Elyana Accessoires ✨
+`Bonjour Manad Store,
 Je souhaite commander cet article :
 
 💍 *Produit :* ${product.name}
@@ -225,7 +225,7 @@ Merci de me confirmer la disponibilité et le délai d'expédition !`;
     const total = cart.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
 
     const text = 
-`Bonjour Elyana Accessoires ✨
+`Bonjour Manad Store,
 Je souhaite valider ma commande avec Paiement à la Livraison (Cash on Delivery) :
 
 🛍️ *Détails de la commande :*
@@ -247,7 +247,7 @@ Merci de préparer mon colis pour expédition !`;
   const getWhatsAppCustomRequestUrl = (req: Omit<CustomJewelryRequest, 'id' | 'createdAt'>) => {
     const phone = settings.whatsappNumber;
     const text = 
-`Bonjour Yasmine / Elyana Accessoires ✨
+`Bonjour Manad Store,
 Je souhaite faire une demande de *Création Sur-Mesure* / Personnalisation :
 
 💎 *Type de bijou :* ${req.pieceType}

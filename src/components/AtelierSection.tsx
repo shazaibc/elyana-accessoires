@@ -23,7 +23,7 @@ export default function AtelierSection() {
             <div className="relative aspect-[4/5] w-full max-w-md mx-auto bg-zinc-100 overflow-hidden shadow-lg border border-zinc-200">
               <Image
                 src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85"
-                alt="Atelier Elyana Casablanca"
+                alt="Atelier Manad Store Casablanca"
                 fill
                 className="object-cover"
               />
@@ -68,7 +68,7 @@ export default function AtelierSection() {
             </h2>
 
             <p className="text-zinc-600 font-light text-sm sm:text-base leading-relaxed">
-              Fondée par <strong>Yasmine Alaoui</strong>, la maison <strong>Elyana Accessoires</strong> s’est donnée pour mission d’offrir aux femmes marocaines des bijoux de caractère, alliant l’éclat précieux des plus grands joailliers à la résistance absolue de l’acier inoxydable et de l’argent 925.
+              La maison <strong>Manad Store</strong> s’est donnée pour mission d’offrir des bijoux et accessoires de caractère, alliant l’éclat précieux des plus grands joailliers à la résistance absolue de l’acier inoxydable et de l’argent 925.
             </p>
 
             <p className="text-zinc-600 font-light text-sm sm:text-base leading-relaxed">

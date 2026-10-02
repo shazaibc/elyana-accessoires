@@ -71,7 +71,7 @@ export default function ProductCatalog({
             <span>Catalogue Exclusif</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl font-light text-zinc-900 tracking-tight">
-            Les Collections Elyana
+            Les Collections Manad
           </h2>
           <p className="mt-3 text-zinc-500 font-light text-sm sm:text-base">
             Chaque bijou est sélectionné avec soin pour sa finesse, sa durabilité et sa brillance. 

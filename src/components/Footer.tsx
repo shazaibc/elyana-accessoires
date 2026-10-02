@@ -17,20 +17,20 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="relative w-10 h-10 rounded-full overflow-hidden border border-rose-200">
+              <div className="relative w-10 h-10 rounded-full overflow-hidden border border-zinc-200 bg-white">
                 <Image
-                  src="/brand/elyana-logo.jpg"
-                  alt="Elyana Accessoires"
+                  src="/brand/manad-logo.jpg"
+                  alt="MANAD Store Logo"
                   fill
-                  className="object-cover"
+                  className="object-contain p-0.5"
                 />
               </div>
               <div>
-                <span className="font-serif text-lg font-light tracking-[0.18em] text-zinc-900">
-                  ELYANA
+                <span className="font-serif text-lg font-light tracking-[0.22em] text-zinc-900">
+                  MANAD
                 </span>
-                <span className="block text-[8px] uppercase tracking-[0.3em] text-zinc-400 font-medium">
-                  ACCESSOIRES CASABLANCA
+                <span className="block text-[8px] uppercase tracking-[0.38em] text-zinc-400 font-medium">
+                  STORE • CASABLANCA
                 </span>
               </div>
             </div>
@@ -43,7 +43,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 border border-zinc-200 flex items-center justify-center text-zinc-600 hover:text-[#943859] hover:border-[#943859] transition-colors"
-                title="Instagram @elyana_accessoires"
+                title="Instagram Officiel"
               >
                 <Instagram21stIcon className="w-4 h-4" />
               </a>
@@ -151,7 +151,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-zinc-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-zinc-400 font-light">
-          <p>© {new Date().getFullYear()} Elyana Accessoires. Tous droits réservés. Casablanca, Maroc.</p>
+          <p>© {new Date().getFullYear()} Manad Store. Tous droits réservés. Casablanca, Maroc.</p>
           <p className="flex items-center gap-1">
             Façonné avec élégance pour la femme marocaine
           </p>

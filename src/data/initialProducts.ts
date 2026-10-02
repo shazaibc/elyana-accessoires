@@ -2,9 +2,9 @@ import { Product, StoreSettings } from '@/types';
 
 export const DEFAULT_SETTINGS: StoreSettings = {
   whatsappNumber: '212625857015',
-  storeName: 'Elyana Accessoires',
+  storeName: 'Manad Store',
   location: 'Casablanca, Boulevard Al Qods / Dakhla, Maroc',
-  announcementText: '✨ Livraison Express dans tout le Maroc • Paiement à la livraison (Cash on Delivery) • Satisfait ou remboursé',
+  announcementText: 'Livraison Express dans tout le Maroc • Paiement à la livraison (Cash on Delivery) • Satisfait ou remboursé',
   deliveryTimeCasablanca: 'Moins de 24h',
   deliveryTimeMorocco: '24h à 48h'
 };
@@ -170,9 +170,9 @@ export const INITIAL_PRODUCTS: Product[] = [
   },
   {
     id: 'ely-010',
-    name: 'Coffret Prestige Écrin Elyana (Pack 3 Pièces)',
-    slug: 'coffret-prestige-ecrin-elyana',
-    description: 'L’ensemble cadeau ultime livré dans son écrin de velours rose poudré Elyana : Collier trèfle or, bracelet jonc assorti et bague ajustable. Le pack parfait à offrir ou pour se faire plaisir.',
+    name: 'Coffret Prestige Écrin Manad (Pack 3 Pièces)',
+    slug: 'coffret-prestige-ecrin-manad',
+    description: 'L’ensemble cadeau ultime livré dans son écrin de velours noir & or Manad Store : Collier trèfle or, bracelet jonc assorti et bague ajustable. Le pack parfait à offrir ou pour se faire plaisir.',
     price: 499,
     originalPrice: 650,
     category: 'packs',

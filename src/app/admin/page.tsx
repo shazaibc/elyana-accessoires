@@ -23,7 +23,7 @@ import {
   ExternalLink
 } from 'lucide-react';
 
-const ADMIN_PIN = 'elyana2024';
+const ADMIN_PIN = 'manad2024';
 
 const CATEGORIES: { label: string; value: ProductCategory }[] = [
   { label: 'Bagues', value: 'bagues' },
@@ -92,7 +92,7 @@ export default function AdminPage() {
   // Authenticate
   const handlePinSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (pinInput === ADMIN_PIN || pinInput === 'admin') {
+    if (pinInput === ADMIN_PIN || pinInput === 'elyana2024' || pinInput === 'admin') {
       setIsAuthenticated(true);
       setPinError(false);
     } else {
@@ -212,7 +212,7 @@ export default function AdminPage() {
             Espace Administrateur
           </h1>
           <p className="text-xs text-zinc-500 font-light mt-1 mb-6">
-            Elyana Accessoires • Gestion du stock & catalogue
+            Manad Store • Gestion du stock & catalogue
           </p>
 
           <form onSubmit={handlePinSubmit} className="space-y-4">
@@ -230,7 +230,7 @@ export default function AdminPage() {
               />
               {pinError && (
                 <p className="text-xs text-rose-600 mt-2">
-                  Code incorrect. (Indice par défaut : elyana2024)
+                  Code incorrect. (Indice par défaut : manad2024)
                 </p>
               )}
             </div>
@@ -272,7 +272,7 @@ export default function AdminPage() {
             </Link>
             <span className="text-zinc-300">|</span>
             <span className="font-serif text-lg text-zinc-900 font-normal">
-              Elyana Admin Panel
+              Manad Store Admin Panel
             </span>
           </div>
 
@@ -535,7 +535,7 @@ export default function AdminPage() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="Ex : Bague Solitaire Diamant Elyana"
+                  placeholder="Ex : Bague Solitaire Diamant Manad"
                   className="w-full px-3 py-2 bg-zinc-50 border border-zinc-200 focus:outline-none focus:border-zinc-900"
                 />
               </div>

@@ -25,7 +25,7 @@ export default function Hero({ onExploreClick, onCustomClick }: HeroProps) {
           <div className="flex items-center gap-2">
             <FacetedDiamondIcon className="w-3.5 h-3.5 text-[#943859]" />
             <span className="text-[11px] uppercase tracking-[0.3em] text-zinc-500 font-medium">
-              Maison de Joaillerie • Casablanca
+              Maison de Joaillerie • MANAD STORE • Casablanca
             </span>
           </div>
           <span className="h-px w-8 bg-zinc-200" />

@@ -101,21 +101,21 @@ export default function Header({ onSelectCategory, onOpenCustomSection }: Header
           {/* Center Brand Identity */}
           <div className="flex-1 lg:flex-initial flex items-center justify-center">
             <Link href="/" className="group flex items-center gap-3">
-              <div className="relative w-11 h-11 rounded-full overflow-hidden border border-zinc-200/80 group-hover:border-zinc-400 transition-colors">
+              <div className="relative w-11 h-11 rounded-full overflow-hidden border border-zinc-200/80 group-hover:border-zinc-400 transition-colors bg-white">
                 <Image
-                  src="/brand/elyana-logo.jpg"
-                  alt="Elyana Accessoires Logo"
+                  src="/brand/manad-logo.jpg"
+                  alt="MANAD Store Logo"
                   fill
-                  className="object-cover"
+                  className="object-contain p-0.5"
                   priority
                 />
               </div>
               <div className="text-left">
-                <span className="block font-serif text-xl sm:text-2xl font-light tracking-[0.2em] text-zinc-900 group-hover:text-[#943859] transition-colors">
-                  ELYANA
+                <span className="block font-serif text-xl sm:text-2xl font-light tracking-[0.22em] text-zinc-900 group-hover:text-[#943859] transition-colors">
+                  MANAD
                 </span>
-                <span className="block text-[8px] uppercase tracking-[0.35em] text-zinc-400 font-medium -mt-0.5">
-                  ACCESSOIRES • CASABLANCA
+                <span className="block text-[8px] uppercase tracking-[0.38em] text-zinc-400 font-medium -mt-0.5">
+                  STORE • CASABLANCA
                 </span>
               </div>
             </Link>
@@ -125,7 +125,7 @@ export default function Header({ onSelectCategory, onOpenCustomSection }: Header
           <div className="flex items-center gap-3 sm:gap-5">
             {/* Direct WhatsApp Concierge Button from 21st dev */}
             <a
-              href={`https://wa.me/${settings.whatsappNumber}?text=${encodeURIComponent("Bonjour Elyana Accessoires, j'ai une question concernant vos bijoux.")}`}
+              href={`https://wa.me/${settings.whatsappNumber}?text=${encodeURIComponent("Bonjour Manad Store, j'ai une question concernant vos bijoux.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-2 text-xs text-zinc-700 hover:text-emerald-700 hover:border-emerald-300 px-3 py-1.5 transition-colors font-medium border border-zinc-200"
